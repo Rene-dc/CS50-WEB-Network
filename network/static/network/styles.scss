@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;600;700&family=Kodchasan:wght@400;600;700&display=swap');
+
+$font: Kodchasan, Sans-serif;
+$font2: Barlow, Sans-serif;
+$orangetransparent: rgba(230, 89, 23, 0.6);
+$orange: rgba(230, 89, 23, 1);
+$bluetransparent: rgba(0, 87, 153, 0.6);
+$blue: rgba(0, 87, 153, 1);
+$green: rgba(31, 153, 71, 1);
+$greentransparent: rgba(31, 153, 71, 0.6);
+$blacktransparent: rgba(0, 0, 0, 0.4);
+
+%form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(230, 89, 23, 0.6);
+    border-radius: 10px;
+    padding: 10px 40px;
+    width: clamp(270px, 450px, calc(100% - 16px));
+    .button {
+        height: 54px;
+        width: clamp(250px, 440px, 100%);
+        background-color: $bluetransparent;
+        font-family: $font;
+        color: white;
+        font-size: 28px;
+        font-weight: 600;
+        margin: clamp(8px, 30px, 30px) 0px;
+        border-radius: 4px;
+        border: none;
+        transition: all 0.4s ease-out;
+    }
+    .button:hover {
+        cursor: pointer;
+        background-color: $blue;
+    }
+}
+%formfield {
+    color: white;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 18px;
+    p {
+        position: relative;
+        top: 10px;
+        margin-top: 8px;
+    }
+    input {
+        outline: none;
+        margin-top: 0;
+        padding-left: 10px;
+        border-radius: 4px;
+        border: none;
+        color: black;
+        font-family: $font;
+        font-size: 18px;
+        height: clamp(30px, 54px, 54px);
+        width: clamp(240px, 430px, calc(100% - 10px));
+    }
+    input:focus {
+        border: 0.1px $orange;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+    }
+}
+%logo {
+    color: $orange;
+    font-family: $font;
+    font-weight: 600;
+    text-decoration: none;
+}
+%navitem {
+    height: 66px;
+    justify-content: baseline;
+    a {
+        background: linear-gradient(to left, transparent 50%, $orange 50%);
+        background-size: 210%;
+        background-position: right;
+        border-radius: 4px;
+        transition: 0.5s ease-out;
+        padding: 10px 15px;
+        font-family: $font;
+        font-size: calc(0.8vw + 10px);
+        font-weight: 400;
+        text-decoration: none;
+        color: $orange;
+    }
+    a:hover {
+        background-position: left;
+        color: black;
+        cursor: pointer;
+    }
+
+}
+%post {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(230, 89, 23, 0.6);
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    .username {
+        height: 30px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        font-family: $font2;
+        font-size: 18;
+        font-weight: 700;
+        color: white;
+    }
+    .username:hover {
+        cursor: pointer;
+    }
+    .content {
+        font-family: $font2;
+        font-size: 18;
+        font-weight: 400;
+        color: white;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        form {
+            textarea {
+                outline: none;
+                box-sizing: border-box;
+                padding: 4px 6px;
+                font-size: 18px;
+                font-family: $font2;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: 80px;
+                min-height: 80px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 4px;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-evenly;
+                input[type=submit], button {
+                    display: flex;
+                    height: 34px;
+                    width: 150px;
+                    background-color: $bluetransparent;
+                    font-family: $font2;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-top: 4px;
+                    margin-bottom: 10px;
+                    border-radius: 4px;
+                    border: none;
+                    transition: all 0.4s ease-out;
+                    justify-content: center;
+                    align-items: center;
+                }
+                input[type=submit]:hover, button:hover {
+                    cursor: pointer;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        align-items:end;
+        height: 30px;
+        .likeinfos {
+            display: flex;
+            transform: translateY(2px);
+            width: 100px;
+            .like, .unlike {
+                height: 25px;
+                width: 25px;
+                button {
+                    background-color: transparent;
+                    border: none;
+                    img {
+                        z-index: 110;
+                        width: 20px;
+                        height: 20px;
+                        transform: translate(-4px);
+                    }
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+            .likes_count {
+                font-family: $font2;
+                font-size: 18px;
+                font-weight: 200;
+                color: white;
+                margin-left: 3px;
+                padding-bottom: 4px;
+            }
+        }
+        .editbutton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            border: none;
+            img {
+                height: 18px;
+                width: 18px;
+            }
+        }
+        .editbutton:hover {
+            cursor: pointer;
+        }
+        .date {
+            height: 25px;
+            justify-content: center;
+            font-family: $font2;
+            font-size: 18px;
+            font-weight: 200;
+            color: white;
+            transform: translateY(2px);
+        }
+    }
+}
+%profile {
+    display: flex;
+    flex-direction: column;
+    background-color: $orangetransparent;
+    border: 3px solid $bluetransparent;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    .username {
+        height: 30px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        font-family: $font2;
+        font-size: 18;
+        font-weight: 700;
+        color: white;
+    }
+    .description, .joined, .last_login, .followers, .followings {
+        font-family: $font2;
+        font-size: 18;
+        font-weight: 400;
+        color: white;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .description {
+        margin-bottom: 10px;
+    }
+    .last_login {
+        margin-bottom: 10px;
+    }
+    .followers, .followings {
+        height: 20px;
+        display: flex;
+        align-items: center;
+        .count {
+            margin-right: 6px;
+        }
+    }
+    .followings {
+        margin-bottom: 10px;
+    }
+    button {
+        height: 34px;
+        width: 200px;
+        background-color: $bluetransparent;
+        font-family: $font2;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: -6px;
+        margin-bottom: 10px;
+        margin-left: calc(50% - 100px);
+        border-radius: 4px;
+        border: none;
+        transition: all 0.4s ease-out;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: $blue;
+    }
+}
+body {
+    margin: 0 0;
+    padding: 0 0;
+    background-image: url('/static/network/images/background.webp');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        .logo {
+            @extend %logo;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(30px, 3vw, 3vw);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .form {
+            @extend %form;
+            margin-right: 8px;
+            margin-left: 8px;
+            .username, .email, .password, .confirmation {
+                @extend %formfield;
+                font-family: $font;
+            }
+            .message {
+                font-family: $font;
+                font-size: 18px;
+                color: red;
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+            .logreg {
+                color: white;
+                font-family: $font;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                a {
+                    text-decoration: underline;
+                    color: white;
+                }
+            }
+        }
+        @media screen and (min-width: 770px){
+            .logo {
+                margin-right: 100px;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .form {
+                margin-right: 100px;
+                margin-left: 100px
+            }
+        }
+        @media screen and (min-width: 1800px) {
+            .form {
+                margin-right: 280px;
+                margin-left: 380px;
+            }
+        }
+        @media screen and (max-width: 884px) {
+            .form {
+                margin-bottom: 30px;
+            }
+        }
+        .hamburger {
+            z-index: 100;
+            rotate: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            transition: all 0.5s ease;
+            .bar {
+                height: 9.8px;
+                width: 48px;
+                background-color: $orange;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                border-radius: 2px;
+                box-shadow: 0 2px 0px rgba(0, 0, 0, 0.193);
+            }
+        }
+        .main-navbar {
+            position: absolute;
+            top: 0;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 2vh;
+            width: 100vw;
+            height: 96px;
+            display: flex;
+            justify-content: space-between;
+            .nav-logo {
+                @extend %navitem;
+                width: 250px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                top: -7px;
+                a {
+                    font-size: calc(1.5vw + 14px);
+                    font-weight: 600;
+                }
+                a:hover {
+                    background-position: right;
+                    color: $orange;
+                }
+            }
+            .navbar {
+                width: clamp(470px, 40%, 650px);
+                height: 66px;
+                display: flex;
+                margin: 0 0;
+                justify-content: space-between;
+                position: relative;
+                left: -6%;
+                .nav-item {
+                    display: flex;
+                    align-items: center;
+                    @extend %navitem;
+                    list-style-type: none;
+                }
+            }
+            .nav-log {
+                @extend %navitem;
+                width: 180px;
+                display: flex;
+                align-items: center;
+    
+            }
+        }
+        @media screen and (min-width: 1100px) {
+            .hamburger {
+                display: none;
+            }
+        }
+        .opened {
+            rotate: 90deg;
+        }
+        .mobile-navbar {
+            z-index: 90;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: $blacktransparent;
+            backdrop-filter: blur(15px);
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: all 0.4s ease-out;
+            .nav-logo {
+                @extend %navitem;
+                width: 218px;
+                display: flex;
+                align-items: baseline;
+                a {
+                    font-size: 36px;
+                }
+                a:hover {
+                    background-position: right;
+                    color: $orange;
+                }
+            }
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                margin: 0 0;
+                padding: 0 0;
+                justify-content: space-between;
+                .nav-item {
+                    display: flex;
+                    justify-content: space-around;
+                    @extend %navitem;
+                    list-style-type: none;
+                    margin: 10px 0;
+                    //background-color: $orange;
+                    a {
+                        //color: black;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .nav-log {
+                @extend %navitem;
+                width: 142px;
+                a {
+                    font-size: 24px;
+                }
+            }
+        }
+        .openedmenu {
+            transform: translateX(0);
+        }
+        .mainpagecontainer {
+            margin-top: 124px;
+            height: calc(100% - 138px);
+            width: 60%;
+            max-width: 1024px;
+            display: flex;
+            flex-direction: column;
+            overflow-x: scroll;
+            .newpost {
+                width: 100%;
+                margin-bottom: 8px;
+                .postform {
+                    @extend %post;
+                    .username:hover {
+                        cursor: default;
+                    }
+                    form {
+                        textarea {
+                            outline: none;
+                            box-sizing: border-box;
+                            padding: 4px 6px;
+                            font-size: 18px;
+                            font-family: $font2;
+                            width: 100%;
+                            min-width: 100%;
+                            max-width: 100%;
+                            height: 100px;
+                            min-height: 100px;
+                            max-height: 100px;
+                            border: none;
+                            border-radius: 10px;
+                            margin-top: 4px;
+                        }
+                        textarea:focus {
+                            border: 0.1px $orange;
+                            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+                        }
+                        .button {
+                            height: 34px;
+                            width: 200px;
+                            background-color: $bluetransparent;
+                            font-family: $font2;
+                            color: white;
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-top: 4px;
+                            margin-bottom: 10px;
+                            margin-left: calc(50% - 100px);
+                            border-radius: 4px;
+                            border: none;
+                            transition: all 0.4s ease-out;
+                        }
+                        .button:hover {
+                            cursor: pointer;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+            .profile {
+                @extend %profile;
+                margin-bottom: 8px;
+            }
+            .posts {
+                .postContainer {
+                    @extend %post;
+                    margin-bottom: 8px;
+                }
+                .pagebuttons {
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    .previous, .next {
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        border-radius: 2px;
+                        background-color: $orangetransparent;
+                        width: 58px;
+                        height: 30px;
+                        margin-left: 32px;
+                        margin-right: 32px;
+                        img {
+                            height: 22px;
+                            width: 22px;
+                        }
+                    }
+                    .previous {
+                        img {
+                            transform: translateX(3px);
+                        }
+                    }
+                    .next {
+                        img {
+                            transform: translateX(-3px);
+                        }
+                    }
+                    .previous:hover, .next:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .mainpagecontainer::-webkit-scrollbar {
+            display: none;
+        }
+        @media screen and (max-width: 1100px) {
+            .mainpagecontainer {
+                width: 100vw;
+                margin-top: 80px;
+                margin-left: 3vw;
+                margin-right: 3vw;
+                height: calc(100% - 80px);
+                .newpost {
+                    margin-bottom: 5px;
+                }
+                .posts {
+                    .postContainer {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+        }
+    }
+}

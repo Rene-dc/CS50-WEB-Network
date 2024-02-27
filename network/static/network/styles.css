@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;600;700&family=Kodchasan:wght@400;600;700&display=swap");
+body .body .form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 89, 23, 0.6);
+  border-radius: 10px;
+  padding: 10px 40px;
+  width: clamp(270px, 450px, 100% - 16px);
+}
+body .body .form .button {
+  height: 54px;
+  width: clamp(250px, 440px, 100%);
+  background-color: rgba(0, 87, 153, 0.6);
+  font-family: Kodchasan, Sans-serif;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 30px 0px;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.4s ease-out;
+}
+body .body .form .button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 87, 153);
+}
+
+body .body .form .username, body .body .form .email, body .body .form .password, body .body .form .confirmation {
+  color: white;
+  font-family: Kodchasan, Sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+body .body .form .username p, body .body .form .email p, body .body .form .password p, body .body .form .confirmation p {
+  position: relative;
+  top: 10px;
+  margin-top: 8px;
+}
+body .body .form .username input, body .body .form .email input, body .body .form .password input, body .body .form .confirmation input {
+  outline: none;
+  margin-top: 0;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: none;
+  color: black;
+  font-family: Kodchasan, Sans-serif;
+  font-size: 18px;
+  height: 54px;
+  width: clamp(240px, 430px, 100% - 10px);
+}
+body .body .form .username input:focus, body .body .form .email input:focus, body .body .form .password input:focus, body .body .form .confirmation input:focus {
+  border: 0.1px rgb(230, 89, 23);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+}
+
+body .body .logo {
+  color: rgb(230, 89, 23);
+  font-family: Kodchasan, Sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body .body .mobile-navbar .nav-log, body .body .mobile-navbar .navbar .nav-item, body .body .mobile-navbar .nav-logo, body .body .main-navbar .nav-log, body .body .main-navbar .navbar .nav-item, body .body .main-navbar .nav-logo {
+  height: 66px;
+  justify-content: baseline;
+}
+body .body .mobile-navbar .nav-log a, body .body .mobile-navbar .navbar .nav-item a, body .body .mobile-navbar .nav-logo a, body .body .main-navbar .nav-log a, body .body .main-navbar .navbar .nav-item a, body .body .main-navbar .nav-logo a {
+  background: linear-gradient(to left, transparent 50%, rgb(230, 89, 23) 50%);
+  background-size: 210%;
+  background-position: right;
+  border-radius: 4px;
+  transition: 0.5s ease-out;
+  padding: 10px 15px;
+  font-family: Kodchasan, Sans-serif;
+  font-size: calc(0.8vw + 10px);
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(230, 89, 23);
+}
+body .body .mobile-navbar .nav-log a:hover, body .body .mobile-navbar .navbar .nav-item a:hover, body .body .mobile-navbar .nav-logo a:hover, body .body .main-navbar .nav-log a:hover, body .body .main-navbar .navbar .nav-item a:hover, body .body .main-navbar .nav-logo a:hover {
+  background-position: left;
+  color: black;
+  cursor: pointer;
+}
+
+body .body .mainpagecontainer .posts .postContainer, body .body .mainpagecontainer .newpost .postform {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 89, 23, 0.6);
+  border-radius: 10px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+body .body .mainpagecontainer .posts .postContainer .username, body .body .mainpagecontainer .newpost .postform .username {
+  height: 30px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: Barlow, Sans-serif;
+  font-size: 18;
+  font-weight: 700;
+  color: white;
+}
+body .body .mainpagecontainer .posts .postContainer .username:hover, body .body .mainpagecontainer .newpost .postform .username:hover {
+  cursor: pointer;
+}
+body .body .mainpagecontainer .posts .postContainer .content, body .body .mainpagecontainer .newpost .postform .content {
+  font-family: Barlow, Sans-serif;
+  font-size: 18;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+body .body .mainpagecontainer .posts .postContainer .content form textarea, body .body .mainpagecontainer .newpost .postform .content form textarea {
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  font-size: 18px;
+  font-family: Barlow, Sans-serif;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 80px;
+  min-height: 80px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+body .body .mainpagecontainer .posts .postContainer .content form .buttons, body .body .mainpagecontainer .newpost .postform .content form .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+body .body .mainpagecontainer .posts .postContainer .content form .buttons input[type=submit], body .body .mainpagecontainer .newpost .postform .content form .buttons input[type=submit], body .body .mainpagecontainer .posts .postContainer .content form .buttons button, body .body .mainpagecontainer .newpost .postform .content form .buttons button {
+  display: flex;
+  height: 34px;
+  width: 150px;
+  background-color: rgba(0, 87, 153, 0.6);
+  font-family: Barlow, Sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.4s ease-out;
+  justify-content: center;
+  align-items: center;
+}
+body .body .mainpagecontainer .posts .postContainer .content form .buttons input[type=submit]:hover, body .body .mainpagecontainer .newpost .postform .content form .buttons input[type=submit]:hover, body .body .mainpagecontainer .posts .postContainer .content form .buttons button:hover, body .body .mainpagecontainer .newpost .postform .content form .buttons button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 87, 153);
+}
+body .body .mainpagecontainer .posts .postContainer .infos, body .body .mainpagecontainer .newpost .postform .infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 30px;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos, body .body .mainpagecontainer .newpost .postform .infos .likeinfos {
+  display: flex;
+  transform: translateY(2px);
+  width: 100px;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .like, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .like, body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .unlike, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .unlike {
+  height: 25px;
+  width: 25px;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .like button, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .like button, body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .unlike button, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .unlike button {
+  background-color: transparent;
+  border: none;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .like button img, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .like button img, body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .unlike button img, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .unlike button img {
+  z-index: 110;
+  width: 20px;
+  height: 20px;
+  transform: translate(-4px);
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .like button:hover, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .like button:hover, body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .unlike button:hover, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .unlike button:hover {
+  cursor: pointer;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .likeinfos .likes_count, body .body .mainpagecontainer .newpost .postform .infos .likeinfos .likes_count {
+  font-family: Barlow, Sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  margin-left: 3px;
+  padding-bottom: 4px;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .editbutton, body .body .mainpagecontainer .newpost .postform .infos .editbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .editbutton img, body .body .mainpagecontainer .newpost .postform .infos .editbutton img {
+  height: 18px;
+  width: 18px;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .editbutton:hover, body .body .mainpagecontainer .newpost .postform .infos .editbutton:hover {
+  cursor: pointer;
+}
+body .body .mainpagecontainer .posts .postContainer .infos .date, body .body .mainpagecontainer .newpost .postform .infos .date {
+  height: 25px;
+  justify-content: center;
+  font-family: Barlow, Sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  transform: translateY(2px);
+}
+
+body .body .mainpagecontainer .profile {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 89, 23, 0.6);
+  border: 3px solid rgba(0, 87, 153, 0.6);
+  border-radius: 10px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+body .body .mainpagecontainer .profile .username {
+  height: 30px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: Barlow, Sans-serif;
+  font-size: 18;
+  font-weight: 700;
+  color: white;
+}
+body .body .mainpagecontainer .profile .description, body .body .mainpagecontainer .profile .joined, body .body .mainpagecontainer .profile .last_login, body .body .mainpagecontainer .profile .followers, body .body .mainpagecontainer .profile .followings {
+  font-family: Barlow, Sans-serif;
+  font-size: 18;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+body .body .mainpagecontainer .profile .description {
+  margin-bottom: 10px;
+}
+body .body .mainpagecontainer .profile .last_login {
+  margin-bottom: 10px;
+}
+body .body .mainpagecontainer .profile .followers, body .body .mainpagecontainer .profile .followings {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+body .body .mainpagecontainer .profile .followers .count, body .body .mainpagecontainer .profile .followings .count {
+  margin-right: 6px;
+}
+body .body .mainpagecontainer .profile .followings {
+  margin-bottom: 10px;
+}
+body .body .mainpagecontainer .profile button {
+  height: 34px;
+  width: 200px;
+  background-color: rgba(0, 87, 153, 0.6);
+  font-family: Barlow, Sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  margin-left: calc(50% - 100px);
+  border-radius: 4px;
+  border: none;
+  transition: all 0.4s ease-out;
+}
+body .body .mainpagecontainer .profile button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 87, 153);
+}
+
+body {
+  margin: 0 0;
+  padding: 0 0;
+  background-image: url("/static/network/images/background.webp");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+body .body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+body .body .logo {
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(30px, 3vw, 3vw);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body .body .form {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+body .body .form .username, body .body .form .email, body .body .form .password, body .body .form .confirmation {
+  font-family: Kodchasan, Sans-serif;
+}
+body .body .form .message {
+  font-family: Kodchasan, Sans-serif;
+  font-size: 18px;
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+body .body .form .logreg {
+  color: white;
+  font-family: Kodchasan, Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+body .body .form .logreg a {
+  text-decoration: underline;
+  color: white;
+}
+@media screen and (min-width: 770px) {
+  body .body .logo {
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .body .form {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body .body .form {
+    margin-right: 280px;
+    margin-left: 380px;
+  }
+}
+@media screen and (max-width: 884px) {
+  body .body .form {
+    margin-bottom: 30px;
+  }
+}
+body .body .hamburger {
+  z-index: 100;
+  rotate: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  transition: all 0.5s ease;
+}
+body .body .hamburger .bar {
+  height: 9.8px;
+  width: 48px;
+  background-color: rgb(230, 89, 23);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.193);
+}
+body .body .main-navbar {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 2vh;
+  width: 100vw;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+body .body .main-navbar .nav-logo {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -7px;
+}
+body .body .main-navbar .nav-logo a {
+  font-size: calc(1.5vw + 14px);
+  font-weight: 600;
+}
+body .body .main-navbar .nav-logo a:hover {
+  background-position: right;
+  color: rgb(230, 89, 23);
+}
+body .body .main-navbar .navbar {
+  width: clamp(470px, 40%, 650px);
+  height: 66px;
+  display: flex;
+  margin: 0 0;
+  justify-content: space-between;
+  position: relative;
+  left: -6%;
+}
+body .body .main-navbar .navbar .nav-item {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+body .body .main-navbar .nav-log {
+  width: 180px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1100px) {
+  body .body .hamburger {
+    display: none;
+  }
+}
+body .body .opened {
+  rotate: 90deg;
+}
+body .body .mobile-navbar {
+  z-index: 90;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+body .body .mobile-navbar .nav-logo {
+  width: 218px;
+  display: flex;
+  align-items: baseline;
+}
+body .body .mobile-navbar .nav-logo a {
+  font-size: 36px;
+}
+body .body .mobile-navbar .nav-logo a:hover {
+  background-position: right;
+  color: rgb(230, 89, 23);
+}
+body .body .mobile-navbar .navbar {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0;
+  padding: 0 0;
+  justify-content: space-between;
+}
+body .body .mobile-navbar .navbar .nav-item {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 10px 0;
+}
+body .body .mobile-navbar .navbar .nav-item a {
+  font-size: 24px;
+}
+body .body .mobile-navbar .nav-log {
+  width: 142px;
+}
+body .body .mobile-navbar .nav-log a {
+  font-size: 24px;
+}
+body .body .openedmenu {
+  transform: translateX(0);
+}
+body .body .mainpagecontainer {
+  margin-top: 124px;
+  height: calc(100% - 138px);
+  width: 60%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+body .body .mainpagecontainer .newpost {
+  width: 100%;
+  margin-bottom: 8px;
+}
+body .body .mainpagecontainer .newpost .postform .username:hover {
+  cursor: default;
+}
+body .body .mainpagecontainer .newpost .postform form textarea {
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  font-size: 18px;
+  font-family: Barlow, Sans-serif;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+body .body .mainpagecontainer .newpost .postform form textarea:focus {
+  border: 0.1px rgb(230, 89, 23);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.312);
+}
+body .body .mainpagecontainer .newpost .postform form .button {
+  height: 34px;
+  width: 200px;
+  background-color: rgba(0, 87, 153, 0.6);
+  font-family: Barlow, Sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  margin-left: calc(50% - 100px);
+  border-radius: 4px;
+  border: none;
+  transition: all 0.4s ease-out;
+}
+body .body .mainpagecontainer .newpost .postform form .button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 87, 153);
+}
+body .body .mainpagecontainer .profile {
+  margin-bottom: 8px;
+}
+body .body .mainpagecontainer .posts .postContainer {
+  margin-bottom: 8px;
+}
+body .body .mainpagecontainer .posts .pagebuttons {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+body .body .mainpagecontainer .posts .pagebuttons .previous, body .body .mainpagecontainer .posts .pagebuttons .next {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(230, 89, 23, 0.6);
+  width: 58px;
+  height: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+body .body .mainpagecontainer .posts .pagebuttons .previous img, body .body .mainpagecontainer .posts .pagebuttons .next img {
+  height: 22px;
+  width: 22px;
+}
+body .body .mainpagecontainer .posts .pagebuttons .previous img {
+  transform: translateX(3px);
+}
+body .body .mainpagecontainer .posts .pagebuttons .next img {
+  transform: translateX(-3px);
+}
+body .body .mainpagecontainer .posts .pagebuttons .previous:hover, body .body .mainpagecontainer .posts .pagebuttons .next:hover {
+  cursor: pointer;
+}
+body .body .mainpagecontainer::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  body .body .mainpagecontainer {
+    width: 100vw;
+    margin-top: 80px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: calc(100% - 80px);
+  }
+  body .body .mainpagecontainer .newpost {
+    margin-bottom: 5px;
+  }
+  body .body .mainpagecontainer .posts .postContainer {
+    margin-bottom: 5px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
